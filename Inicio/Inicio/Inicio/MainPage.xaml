@@ -4,8 +4,26 @@
              xmlns:local="clr-namespace:Inicio"
              x:Class="Inicio.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ScrollView >
+        <StackLayout  BackgroundColor="Blue" Margin="0,10,0,10" Padding="0,10,0,0">
+            <StackLayout >
+                <Image  Source="Imagen.png " HorizontalOptions="Center">
+                 </Image>
+            </StackLayout>
+            <Label TextColor="Violet" FontSize="40" HorizontalOptions="Center"></Label>
+        </StackLayout>
+        <TableView Intent="Form" HasUnevenRows="True">
+            <BoxView></BoxView>
+            <TableSection Title="Usuario" >
+                <EntryCell x:Name="Edad" Text="Edad" Detail="ingrese la edad"></EntryCell>
+                <EntryCell x:Name="Intereses" Text="intereses" Detail="ingrese sus intereses"></EntryCell>
+                <EntryCell x:Name="Aprende" Text="Aprende" Detail="ingrese sus intereses"></EntryCell>
+                <EntryCell x:Name="Otro" Text="Otro" Detail="ingrese otro"></EntryCell>
+
+            </TableSection>
+            </TableView>
+
+    </ScrollView>
+    
 
 </ContentPage>
